@@ -9,6 +9,7 @@ public class DocumentSignProcessInfo {
     private long id;
     private SignProcessState signProcessState;
     private Document document;
+    private Company onSignatureCompany;
 
     public long getId() {
         return id;
@@ -37,6 +38,15 @@ public class DocumentSignProcessInfo {
     @MapsId
     public DocumentSignProcessInfo setDocument(Document document) {
         this.document = document;
+        return this;
+    }
+
+    public Company getOnSignatureCompany() {
+        return onSignatureCompany;
+    }
+
+    public DocumentSignProcessInfo setOnSignatureCompany(Company onSignatureCompany) {
+        this.onSignatureCompany = onSignatureCompany;
         return this;
     }
 }
